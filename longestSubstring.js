@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-let s = "pwwkew"
+let s = "pwwkewdfhfdg"
 const lengthOfLongestSubstring = (s) => {
   let letterDictionary = {}
   let result = 0;
@@ -20,7 +20,6 @@ const lengthOfLongestSubstring = (s) => {
       letterDictionary = {}
       letterDictionary[letter] = i
       count = 1
-
     }
     else{
       letterDictionary[letter] = i;
