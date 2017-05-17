@@ -2,37 +2,30 @@
  * @param {string} s
  * @return {number}
  */
-let s = "pwwkewdfhfdg"
+let s = "kewwe"
 const lengthOfLongestSubstring = (s) => {
-  let letterDictionary = {}
   let result = 0;
   let count = 0;
-
+  let letterArray = []
 
   for(i=0; i < s.length; i++){
-    let letter = s[i]
-    let next = s[i+1]
-    let previous = s[i-1]
-
-    if(letter in letterDictionary){
-      i = letterDictionary[letter] + 1
-      letter = s[i]
-      letterDictionary = {}
-      letterDictionary[letter] = i
-      count = 1
+    
+    if(letterArray.indexOf(s[i]) == -1){
+      letterArray.push(s[i])
+      count = letterArray.length
     }
     else{
-      letterDictionary[letter] = i;
-      count += 1
+      let index = letterArray.indexOf(s[i])
+      letterArray.push(s[i])
+      letterArray.splice(0, index + 1)
+      count = letterArray.length
     }
-
     if(result < count){
       result = count;
     }
+
   }
-  console.log(result);
-    return result
 
+  return result
 };
-
 lengthOfLongestSubstring(s);
