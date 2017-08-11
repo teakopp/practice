@@ -9,7 +9,7 @@ const lengthOfLongestSubstring = (s) => {
   let letterArray = []
 
   for(i=0; i < s.length; i++){
-    
+
     if(letterArray.indexOf(s[i]) == -1){
       letterArray.push(s[i])
       count = letterArray.length
