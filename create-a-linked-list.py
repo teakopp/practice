@@ -59,7 +59,7 @@ class SingleLinkedList:
             # jump to the linked node
             current_node = current_node.next
 
-            return count
+        return count
 
     def output_list(self):
         "outputs the list (the value of the node, actually)"
@@ -72,29 +72,20 @@ class SingleLinkedList:
             # Jump to the linked node
 
             current_node = current_node.next
-            
+
         return
 
 
 
-# node1 = ListNode(15)
-# node2 = ListNode(8.2)
-# node3 = ListNode("Berlin")
+node1 = ListNode(15)
+node2 = ListNode(8.2)
+item3 = "Berlin"
+node4 = ListNode(15)
 
+track = SingleLinkedList()
+print("track length: %i" % track.list_length())
 
-
-
-
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        """
+for current_item in [node1, node2, item3, node4]:
+    track.add_list_item(current_item)
+    print("track length: %i" % track.list_length())
+    track.output_list()
