@@ -75,6 +75,27 @@ class SingleLinkedList:
 
         return
 
+    def unordered_search(self, value):
+        "search the linked list for the node that has this value"
+
+        # define current node
+
+        #define position
+        node_id = 1
+
+        # define list of results
+        results = []
+
+        while current_node is not None:
+            if current_node.has_value(value):
+                results.append(node_id)
+
+            # jump to the linked node
+            current_node = current_node.next
+            node_id = node_id + 1
+
+        return results
+
 
 
 node1 = ListNode(15)
